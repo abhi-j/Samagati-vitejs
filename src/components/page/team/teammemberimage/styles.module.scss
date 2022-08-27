@@ -1,0 +1,64 @@
+.container {
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 10px 10px 10px rgba(7, 30, 75, 0.3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 0;
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit: cover;
+        position: absolute;
+        object-position: top center;
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 150px;
+        height: 200px;
+    }
+
+    &:hover {
+        div {
+            visibility: visible;
+        }
+    }
+
+    div {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        transition: all 0.2s;
+        flex-direction: column;
+        z-index: 1;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1) 30%,
+            rgba(7, 30, 75, 0.9) 92%
+        );
+
+        h1,
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

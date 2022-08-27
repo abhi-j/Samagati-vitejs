@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    /* background-color: #f4f4f4; */
+    background-color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*---------------------------- Margins  ----------------------------*/
+
+.top-margin-high {
+    margin-top: 80px !important;
+}
+
+.top-margin-meduim {
+    margin-top: 50px !important;
+}
+
+.top-margin-low {
+    margin-top: 20px !important;
+}
+
+/*--------------------------- Paddings ----------------------------*/
+.high-padding {
+    padding: 30px;
+}
+
+.meduim-padding {
+    padding: 20px;
+}
+
+.low-padding {
+    padding: 10px;
+}
+
+/*--------------------------- Corners ----------------------------*/
+.high-corner {
+    border-radius: 20px;
+}
+
+.medium-corner {
+    border-radius: 15px;
+}
+
+.low-corner {
+    border-radius: 10px;
+}
+
+/*----------------------------- Shadow --------------------------*/
+.medium-shadow {
+    box-shadow: 10px 10px 10px rgba(7, 30, 75, 0.3);
+}
+
+/*---------------------------- Colors ----------------------------*/
+.primary-color {
+    color: #173b82;
+}
+
+.secondary-color {
+    color: white;
+}
+
+/*--------------------------- text-weight ---------------------------*/
+.light-text {
+    font-weight: 300;
+}
+
+/*--------------------------- font sizes --------------------------*/
+.text-1 {
+    font-size: 34px;
+}
+
+.text-2 {
+    font-size: 28px;
+}
+
+.text-3 {
+    font-size: 22px;
+}
+
+.text-4 {
+    font-size: 16px;
+}
+
+:root {
+    --primary-color: #173b82;
+    --white: #ffffff;
+}

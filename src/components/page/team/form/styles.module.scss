@@ -1,0 +1,48 @@
+.textContainer {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+
+    h1 {
+        font-size: 28px;
+        font-weight: 'bold';
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.formContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('./image/teamform-bg.png');
+    background-size: 100% 100%;
+    background-position: top center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+
+    form {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            flex: 1;
+            display: flex;
+
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

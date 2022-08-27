@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}

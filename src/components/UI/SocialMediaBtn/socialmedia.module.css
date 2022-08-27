@@ -1,0 +1,18 @@
+.container {
+  width: 50px;
+  height: 50px;
+  color: #173b82;
+  background: #ffffff;
+  box-shadow: 5px 5px 8px #cbced1, -1px -1px 5px white;
+  cursor: pointer;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  transition: 0.3s ease-in;
+}
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 17px #cbced1, -2px -2px 10px white;
+}

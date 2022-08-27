@@ -1,0 +1,19 @@
+.container {
+    top: 0;
+    width: 100%;
+    background: url('./image/navbg.png');
+    background-size: cover;
+    padding: 15px 60px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clip-path: polygon(50% 9%, 100% 0, 100% 100%, 51% 90%, 0 100%, 0 0);
+}
+
+.NavList {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}

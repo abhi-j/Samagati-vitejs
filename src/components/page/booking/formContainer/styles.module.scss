@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: #173b82;
+        max-width: 500px;
+        margin: 0;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    form {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

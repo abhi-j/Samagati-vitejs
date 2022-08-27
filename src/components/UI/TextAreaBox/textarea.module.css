@@ -1,0 +1,27 @@
+.textareabox {
+    width: 100%;
+    height: 170px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 10px #cbced19e, inset -6px -6px 6px white;
+    border: none;
+    resize: none;
+    font-family: 'Lato';
+    font-size: 16px;
+    color: #173b82;
+}
+
+.textareabox::placeholder {
+    color: #173b8286;
+}
+
+.textareabox:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .textareabox {
+        width: 90%;
+    }
+}

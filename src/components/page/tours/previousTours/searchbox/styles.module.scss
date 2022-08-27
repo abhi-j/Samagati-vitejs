@@ -1,0 +1,29 @@
+.container {
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 50px;
+
+    input {
+        width: 100%;
+        max-width: 500px;
+        background: #f0f0f3;
+        box-shadow: -5px -5px 10px #ffffff,
+            5px 5px 10px rgba(174, 174, 192, 0.3),
+            inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #ffffff;
+        border-radius: 33px;
+        height: 40px;
+        border: 0px;
+        padding: 30px;
+        color: rgba(23, 59, 130, 1);
+        font-size: 16px;
+
+        &:focus {
+            outline: 0px;
+        }
+
+        &::-webkit-input-placeholder {
+            color: rgba(23, 59, 130, 0.39);
+            font-style: italic;
+        }
+    }
+}

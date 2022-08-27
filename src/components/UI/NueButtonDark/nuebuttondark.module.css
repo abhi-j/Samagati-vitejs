@@ -1,0 +1,14 @@
+.container {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background: #173b82;
+    border: 2px solid rgba(23, 59, 130, 0.83);
+    box-shadow: -7px -15px 48px rgba(52, 75, 164, 0.4),
+        16px 16px 32px rgba(5, 19, 47, 0.5);
+    border-radius: 55px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}

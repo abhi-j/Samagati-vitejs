@@ -1,0 +1,23 @@
+.container {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 100px;
+    box-shadow: 7px 7px 10px #cbced1, -2px -2px 10px white;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s ease-in;
+    color: #173b82;
+    background-color: white;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 12px 12px 17px #cbced1, -2px -2px 10px white;
+}
+
+.container:active {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 11px #cbced1, -2px -2px 10px white;
+}
