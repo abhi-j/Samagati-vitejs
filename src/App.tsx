@@ -15,6 +15,7 @@ import Register from './pages/register';
 import Profile from './pages/profile';
 import { AuthContext } from './app/auth';
 import { getUserData } from './services/auth';
+import Success from './pages/confirm';
 
 function App() {
     const user = useContext(AuthContext);
@@ -44,6 +45,7 @@ function App() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/profile/:user' element={<Profile />} />
                 <Route path='/booking/:tour' element={<Booking />} />
+                <Route path='/success' element={<Success />} />
             </Routes>
         </>
     );

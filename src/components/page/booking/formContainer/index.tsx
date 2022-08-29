@@ -6,10 +6,17 @@ import { useState } from 'react';
 import TextArea from './textArea';
 import { useParams } from 'react-router-dom';
 import { AuthContext } from '../../../../app/auth';
+import { loadStripe } from '@stripe/stripe-js';
+import axios from 'axios';
+
+const STRIPE_PK =
+    'pk_test_51KNVZKSCvyHnWtmxnbmcFMqluPZIrnqVmNRjFW6Oe1c4LYXQZFQF4WUb0kDFqk1g4VEm3nCeZLP0znP1vdWJ83HO004vA7sSau';
+
+const stripePromise = loadStripe(STRIPE_PK);
 
 const FormContainer = () => {
     const { value } = useContext(AuthContext);
-    const params = useParams();
+    const { tour } = useParams();
     const [values, setValues] = useState({
         name: '',
         email: '',
@@ -18,8 +25,6 @@ const FormContainer = () => {
         learnings: '',
     });
 
-    console.log(params);
-
     const handleChange = (name: string, value: string) => {
         setValues({
             ...values,
@@ -27,11 +32,40 @@ const FormContainer = () => {
         });
     };
 
-    const onSubmit = (e: any) => {
+    const onSubmit = async (e: any) => {
         e.preventDefault();
         if (value.user === null) {
             alert('please login before booking');
+            return;
         }
+
+        const stripe = await stripePromise;
+        const config = {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('samagati_jwt')}`,
+            },
+        };
+
+        const res = await axios.post(
+            'http://localhost:1337/api/booking/pretransaction',
+            {
+                tour: {
+                    id: tour,
+                },
+                user: {
+                    name: values.name,
+                    contact: values.contact,
+                    email: values.email,
+                    learning: values.learnings,
+                },
+            },
+            config
+        );
+
+        const session = res.data;
+        const result = await stripe?.redirectToCheckout({
+            sessionId: session.id,
+        });
     };
 
     return (

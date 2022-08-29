@@ -18,7 +18,7 @@ const UpcommingTours: React.FC<props> = ({ data }) => {
                         name={item.attributes.Name}
                         imageLink={`http://localhost:1337${item.attributes.image.data.attributes.formats.small.url}`}
                         key={i}
-                        slug={item.attributes.slug}
+                        slug={item.id}
                     />
                 ))}
             </div>
