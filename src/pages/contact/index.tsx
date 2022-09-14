@@ -5,6 +5,7 @@ import {
 } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { useState } from "react";
+import Footer from "../footer";
 
 import TextAreaBox from "../../components/UI/TextAreaBox";
 import NueButton from "../../components/UI/NueButton";
@@ -99,6 +100,7 @@ const Contact = () => {
         </div>
       </div>
       <FloatingBtn />
+      <Footer />
     </div>
   );
 };

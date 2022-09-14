@@ -4,6 +4,7 @@ import Info from "../../components/page/tours/info";
 import PreviousTours from "../../components/page/tours/previousTours";
 import UpcommingTours from "../../components/page/tours/upcomingTours";
 import { API_TOKEN } from "../../config";
+import Footer from "../footer";
 
 const Tours = () => {
   const [tours, setTours] = useState<any>({});
@@ -38,6 +39,8 @@ const Tours = () => {
               /Week/Month and Year in India. "
         }
       />
+      <Info title={"Upcoming Voyages and events"} text={""} />
+      {tours.data ? <UpcommingTours data={tours?.data} /> : <h1></h1>}
       <Info
         title={"Our previous voyages"}
         text={
@@ -49,7 +52,7 @@ const Tours = () => {
       />
       <PreviousTours />
 
-      {tours.data ? <UpcommingTours data={tours?.data} /> : <h1></h1>}
+      <Footer />
     </div>
   );
 };
