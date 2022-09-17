@@ -1,4 +1,16 @@
 .container {
-  width: 100%;
-  flex: 1;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 50%;
+    }
 }

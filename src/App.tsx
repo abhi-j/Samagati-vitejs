@@ -47,12 +47,12 @@ function App() {
 
   return (
     <>
-      <div
+      {/* <div
         className="loadingContainer"
         style={{ display: loading ? "block" : "none" }}
       >
         <img src={logo} alt="Samagati" />
-      </div>
+      </div> */}
       <Navbar />
 
       <Routes>

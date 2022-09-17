@@ -1,46 +1,47 @@
 .footerContainer {
-  left: 0;
-  bottom: 0;
-  height: 380px;
-  background-repeat: no-repeat;
-  background-image: url("../../../src/assets/image/footerBg.png");
-  object-fit: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-size: cover;
+    left: 0;
+    bottom: 0;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-image: url('../../../src/assets/image/footerBg.png');
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    z-index: 1;
 }
 .footerLogo {
-  margin-top: 8rem;
+    margin-top: 8rem;
 }
 .heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1rem;
-  color: #173b82;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: #173b82;
 }
 
 .linkContainer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-  color: #173b82;
-  justify-content: space-around;
-  gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    color: #173b82;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .left {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
 }
 
 .right {
-  margin-left: 8em;
+    margin-left: 8em;
 }
 
 .copyright {
-  margin-top: 2rem;
-  color: #173b82;
+    margin-top: 2rem;
+    color: #173b82;
 }

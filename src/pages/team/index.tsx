@@ -1,26 +1,36 @@
-import CardList from "../../components/page/team/cardList";
-import TeamForm from "../../components/page/team/form";
-import Footer from "../footer";
-import styles from "./styles.module.scss";
+import CardList from '../../components/page/team/cardList';
+import TeamForm from '../../components/page/team/form';
+import Footer from '../footer';
+import styles from './styles.module.scss';
 
 const Team = () => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.textContainer + " top-margin-high primary-color"}>
-        <h1>Our Beloved Team</h1>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that
-        </p>
-      </div>
+    return (
+        <div className={styles.container}>
+            <div
+                className={
+                    styles.textContainer + ' top-margin-high primary-color'
+                }
+            >
+                <h1>Our Ecosystem</h1>
+                <p>
+                    “Coming together is the beginning, keeping together is
+                    progress and working together is success.”
+                </p>
+                <p
+                    style={{
+                        fontStyle: 'italic',
+                    }}
+                >
+                    -Henry Ford
+                </p>
+            </div>
 
-      <CardList />
+            <CardList />
 
-      <TeamForm />
-      <Footer />
-    </div>
-  );
+            <TeamForm />
+            <Footer />
+        </div>
+    );
 };
 
 export default Team;
