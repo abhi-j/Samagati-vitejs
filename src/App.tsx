@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Navbar from "./components/Layout/Navbar";
 import Home from "./pages/home";
 import Booking from "./pages/booking";
