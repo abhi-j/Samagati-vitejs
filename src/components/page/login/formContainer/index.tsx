@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 import Input from '../../../UI/Input';
-
 import SocialMediaBtn from '../../../UI/SocialMediaBtn';
 import styles from './styles.module.scss';
 import { AuthContext } from '../../../../app/auth';
@@ -29,9 +29,20 @@ const FormContainer = () => {
             });
             localStorage.setItem('samagati_jwt', data.jwt);
             localStorage.setItem('samagati_user', JSON.stringify(data.user));
+            Swal.fire({
+                title: 'Login Success',
+                text: 'User login is successfull',
+                icon: 'success',
+                confirmButtonText: 'Cool',
+            });
             navigate('/');
         } catch (err: any) {
-            alert(err.response.data.error.message);
+            Swal.fire({
+                title: 'Error',
+                text: err.response.data.error.message,
+                icon: 'error',
+                confirmButtonText: 'Cool',
+            });
         }
     };
 

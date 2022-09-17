@@ -6,13 +6,21 @@ import { useState } from 'react';
 import TextArea from './textArea';
 import { useParams } from 'react-router-dom';
 import { AuthContext } from '../../../../app/auth';
-import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 
-const STRIPE_PK =
-    'pk_test_51KNVZKSCvyHnWtmxnbmcFMqluPZIrnqVmNRjFW6Oe1c4LYXQZFQF4WUb0kDFqk1g4VEm3nCeZLP0znP1vdWJ83HO004vA7sSau';
-
-const stripePromise = loadStripe(STRIPE_PK);
+function loadScript(src) {
+    return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => {
+            resolve(true);
+        };
+        script.onerror = () => {
+            resolve(false);
+        };
+        document.body.appendChild(script);
+    });
+}
 
 const __DEV__ =
     document.domain === 'localhost' || document.domain === '127.0.0.1';
@@ -35,21 +43,33 @@ const FormContainer = () => {
         });
     };
 
-    const onSubmit = async (e: any) => {
+    const onSubmit = (e: any) => {
         e.preventDefault();
         if (value.user === null) {
             alert('please login before booking');
             return;
         }
 
-        const stripe = await stripePromise;
+        displayRazorpay();
+    };
+
+    async function displayRazorpay() {
+        const res = await loadScript(
+            'https://checkout.razorpay.com/v1/checkout.js'
+        );
+
+        if (!res) {
+            alert('Razorpay SDK failed to load. Are you online?');
+            return;
+        }
+
         const config = {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('samagati_jwt')}`,
             },
         };
 
-        const res = await axios.post(
+        const { data } = await axios.post(
             'http://localhost:1337/api/booking/pretransaction',
             {
                 tour: {
@@ -65,11 +85,29 @@ const FormContainer = () => {
             config
         );
 
-        const session = res.data;
-        const result = await stripe?.redirectToCheckout({
-            sessionId: session.id,
-        });
-    };
+        console.log(data);
+
+        const options = {
+            key: __DEV__ ? 'rzp_test_wJS0N4TKDfxnud' : 'PRODUCTION_KEY',
+            currency: data.currency,
+            amount: data.amount.toString(),
+            order_id: data.id,
+            name: 'Donation',
+            description: 'Thank you for nothing. Please give us some money',
+            image: 'http://localhost:1337/logo.svg',
+            handler: function (response) {
+                console.log(response);
+            },
+            prefill: {
+                name: values.name,
+                email: values.email,
+                phone_number: values.contact,
+            },
+        };
+
+        const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
+    }
 
     return (
         <div className={styles.container}>
@@ -114,6 +152,7 @@ const FormContainer = () => {
                             handleChange('redeem', value);
                         }}
                     />
+
                     <NueButton />
                 </form>
             </div>

@@ -19,10 +19,12 @@
     "react-icons": "^4.4.0",
     "react-is-visible": "^1.2.0",
     "react-loader-spinner": "^5.3.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-slick": "^0.29.0",
     "sass": "^1.54.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.33"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

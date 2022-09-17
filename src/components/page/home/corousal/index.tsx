@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import styles from './styles.module.scss';
+import { Carousel } from 'react-responsive-carousel';
 
 const Item: React.FC<any> = () => {
     return (
@@ -35,15 +36,25 @@ const Corousal: React.FC<any> = () => {
         arrows: true,
     };
     return (
+        // <div className={styles.container}>
+        //     <Slider {...settings}>
+        //         <Item />
+        //         <Item />
+        //         <Item />
+        //         <Item />
+        //         <Item />
+        //         <Item />
+        //     </Slider>
+        // </div>
         <div className={styles.container}>
-            <Slider {...settings}>
+            <Carousel {...settings}>
                 <Item />
                 <Item />
                 <Item />
                 <Item />
                 <Item />
                 <Item />
-            </Slider>
+            </Carousel>
         </div>
     );
 };
