@@ -5,6 +5,9 @@ import Slider from "react-slick";
 import styles from "./styles.module.scss";
 import { BsImages } from "react-icons/bs";
 
+import styles from './styles.module.scss';
+import { Carousel } from 'react-responsive-carousel';
+
 const Item: React.FC<any> = ({ image, text }) => {
   return (
     <div className={styles.itemContainer}>
@@ -21,6 +24,7 @@ const Item: React.FC<any> = ({ image, text }) => {
 };
 
 const Corousal: React.FC<any> = () => {
+
   const [carousel, setCarousel] = useState<any>([]);
 
   useEffect(() => {

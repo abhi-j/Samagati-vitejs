@@ -1,15 +1,16 @@
-import React, { useContext, useState } from "react";
-import { AiFillGoogleCircle } from "react-icons/ai";
-import { BsFacebook } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useState } from 'react';
+import { AiFillGoogleCircle } from 'react-icons/ai';
+import { BsFacebook } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-import Input from "../../../UI/Input";
+import Input from '../../../UI/Input';
+import SocialMediaBtn from '../../../UI/SocialMediaBtn';
+import styles from './styles.module.scss';
+import { AuthContext } from '../../../../app/auth';
+import { signIn } from '../../../../services/auth';
+import NueButton from './btn';
 
-import SocialMediaBtn from "../../../UI/SocialMediaBtn";
-import styles from "./styles.module.scss";
-import { AuthContext } from "../../../../app/auth";
-import { signIn } from "../../../../services/auth";
-import NueButton from "./btn";
 
 const FormContainer = () => {
   const user = useContext(AuthContext);
@@ -20,20 +21,33 @@ const FormContainer = () => {
     password: "",
   });
 
-  const onSubmit = async (e: any) => {
-    e.preventDefault();
-    try {
-      const data = await signIn({ ...values });
-      user.setValue({
-        user: data.user,
-      });
-      localStorage.setItem("samagati_jwt", data.jwt);
-      localStorage.setItem("samagati_user", JSON.stringify(data.user));
-      navigate("/");
-    } catch (err: any) {
-      alert(err.response.data.error.message);
-    }
-  };
+
+    const onSubmit = async (e: any) => {
+        e.preventDefault();
+        try {
+            const data = await signIn({ ...values });
+            user.setValue({
+                user: data.user,
+            });
+            localStorage.setItem('samagati_jwt', data.jwt);
+            localStorage.setItem('samagati_user', JSON.stringify(data.user));
+            Swal.fire({
+                title: 'Login Success',
+                text: 'User login is successfull',
+                icon: 'success',
+                confirmButtonText: 'Cool',
+            });
+            navigate('/');
+        } catch (err: any) {
+            Swal.fire({
+                title: 'Error',
+                text: err.response.data.error.message,
+                icon: 'error',
+                confirmButtonText: 'Cool',
+            });
+        }
+    };
+
 
   return (
     <div className={styles.container}>
