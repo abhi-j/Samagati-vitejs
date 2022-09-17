@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { API_TOKEN } from "../../../../config";
 import axios from "axios";
-import Slider from "react-slick";
-import styles from "./styles.module.scss";
-import { BsImages } from "react-icons/bs";
 
-import styles from './styles.module.scss';
-import { Carousel } from 'react-responsive-carousel';
+import styles from "./styles.module.scss";
+import { Carousel as RCarousal } from "react-responsive-carousel";
 
 const Item: React.FC<any> = ({ image, text }) => {
   return (
@@ -24,7 +21,6 @@ const Item: React.FC<any> = ({ image, text }) => {
 };
 
 const Corousal: React.FC<any> = () => {
-
   const [carousel, setCarousel] = useState<any>([]);
 
   useEffect(() => {
@@ -60,7 +56,7 @@ const Corousal: React.FC<any> = () => {
   };
   return (
     <div className={styles.container}>
-      <Slider {...settings}>
+      <RCarousal centerMode>
         {carousel.map((item) => {
           return (
             <Item
@@ -69,7 +65,7 @@ const Corousal: React.FC<any> = () => {
             ></Item>
           );
         })}
-      </Slider>
+      </RCarousal>
     </div>
   );
 };
