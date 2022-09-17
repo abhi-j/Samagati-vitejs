@@ -25,14 +25,8 @@ const Corousal: React.FC<any> = () => {
 
   useEffect(() => {
     async function getdata() {
-      const config = {
-        headers: {
-          Authorization: `Bearer ${API_TOKEN}`,
-        },
-      };
       const res = await axios.get(
-        "http://localhost:1337/api/carousels?populate=*",
-        config
+        "http://localhost:1337/api/carousels?populate=*"
       );
       const images = res.data;
       setCarousel(images.data);

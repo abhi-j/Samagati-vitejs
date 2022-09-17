@@ -1,12 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 function Footer() {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerLogo}>
-        <img src="/src/assets/image/Logo.png" alt="Logo" />
+        <Link to="/">
+          <img src="/src/assets/image/Logo.png" alt="Logo" />
+        </Link>
       </div>
       <div>
         <div className={styles.heading}>
@@ -15,11 +18,21 @@ function Footer() {
         </div>
         <div className={styles.linkContainer}>
           <div className={styles.left}>
-            <span>Home</span>
-            <span>About us</span>
-            <span>Teams</span>
-            <span>Tours</span>
-            <span>Bookings</span>
+            <Link to="/">
+              <span>Home</span>
+            </Link>
+            <Link to="/about">
+              <span>About us</span>
+            </Link>
+            <Link to="/team">
+              <span>Teams</span>
+            </Link>
+            <Link to="tours">
+              <span>Tours</span>
+            </Link>
+            <Link to="/contact">
+              <span>Contact</span>
+            </Link>
           </div>
           <div className={styles.right}>
             <span>9588043164, 8805388985, 6265987173</span>

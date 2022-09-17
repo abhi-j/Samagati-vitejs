@@ -12,11 +12,14 @@ import styles from "./styles.module.scss";
 import Logo from "../../../assets/image/Logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../app/auth";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { value, setValue } = useContext(AuthContext);
   return (
     <div className={styles.container}>
-      <img src={Logo} width={186} height={43} alt="Samagati" />
+      <Link to="/">
+        <img src={Logo} width={186} height={43} alt="Samagati" />
+      </Link>
       <ul className={styles.NavList}>
         <li>
           <NavBtn Icon={AiOutlineHome} Label="Home" page_link="/" />

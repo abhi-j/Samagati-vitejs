@@ -20,12 +20,7 @@ const About = () => {
           />
         </div>
         <div className={styles.rightContent}>
-          <img
-            src="/assets/travel6.jpg"
-            alt="Picture of the author"
-            width={1100}
-            height={500}
-          />
+          <img src="/" alt="Picture of the author" width={1100} height={500} />
         </div>
       </div>
       <div className={styles.container2}>
@@ -67,7 +62,6 @@ const About = () => {
       </div>
       <div></div>
       <Footer />
-      <Profile />
     </div>
   );
 };
