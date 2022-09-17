@@ -1,12 +1,24 @@
 .members {
-    width: 80%;
-    margin: auto;
-    background: #eeeeee;
-    margin-bottom: 100px;
-    padding-bottom: 80px;
+  width: 80%;
+  margin: auto;
+  background: #f4f4f4;
+  margin-bottom: 100px;
+  padding-bottom: 80px;
+  background: linear-gradient(
+      135.37deg,
+      rgba(0, 0, 0, 0.4) 4.29%,
+      rgba(255, 255, 255, 0.4) 95.6%
+    ),
+    #f4f4f4;
+  background-blend-mode: soft-light, normal;
+  /* neo-stroke */
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: -9px -9px 16px #fafbff, 9px 9px 16px rgba(166, 171, 189, 0.4);
+  border-radius: 15px;
 }
 
 .sliderContainer {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 }

@@ -57,7 +57,7 @@ const Corousal: React.FC<any> = () => {
     rows: 2,
   };
 
-  const [carousel, setCarousel] = useState<any>({});
+  const [carousel, setCarousel] = useState<any>([]);
 
   useEffect(() => {
     async function getdata() {
@@ -71,77 +71,27 @@ const Corousal: React.FC<any> = () => {
         config
       );
       const teams = res.data;
-      setCarousel(teams);
+      setCarousel(teams.data);
     }
     getdata();
   }, []);
 
   console.log(carousel);
-  console.log();
 
   return (
     <div>
       <Slider {...settings} className={styles.sliderContainer}>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
-        <div>
-          <TeamMemberImage {...members[memberIndex]} />
-        </div>
+        {carousel.map((item) => {
+          return (
+            <div>
+              <TeamMemberImage
+                name={item.attributes.Name}
+                image={`http://localhost:1337${item.attributes.Image.data.attributes.formats.medium.url}`}
+                role={item.attributes.Role}
+              />
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );

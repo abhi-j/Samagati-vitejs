@@ -3,19 +3,16 @@ import { API_TOKEN } from "../../../../config";
 import axios from "axios";
 import Slider from "react-slick";
 import styles from "./styles.module.scss";
+import { BsImages } from "react-icons/bs";
 
-const Item: React.FC<any> = () => {
+const Item: React.FC<any> = ({ image, text }) => {
   return (
     <div className={styles.itemContainer}>
       <div className={styles.item}>
-        <img src="./image/pexels.jpg" alt="" />
+        <img src={image} alt={text} />
         <div>
           <p>
-            <mark>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that
-            </mark>
+            <mark>{text}</mark>
           </p>
         </div>
       </div>
@@ -24,7 +21,7 @@ const Item: React.FC<any> = () => {
 };
 
 const Corousal: React.FC<any> = () => {
-  const [carousel, setCarousel] = useState<any>({});
+  const [carousel, setCarousel] = useState<any>([]);
 
   useEffect(() => {
     async function getdata() {
@@ -38,7 +35,7 @@ const Corousal: React.FC<any> = () => {
         config
       );
       const images = res.data;
-      setCarousel(images);
+      setCarousel(images.data);
     }
     getdata();
   }, []);
@@ -54,16 +51,20 @@ const Corousal: React.FC<any> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
   return (
     <div className={styles.container}>
       <Slider {...settings}>
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {carousel.map((item) => {
+          return (
+            <Item
+              image={`http://localhost:1337${item.attributes.Image.data.attributes.formats.medium.url}`}
+              text={item.attributes.Location}
+            ></Item>
+          );
+        })}
       </Slider>
     </div>
   );

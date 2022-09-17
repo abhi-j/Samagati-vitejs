@@ -1,5 +1,5 @@
 import jwt_decode from "jwt-decode";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,9 +17,12 @@ import { AuthContext } from "./app/auth";
 import { getUserData } from "./services/auth";
 import Success from "./pages/confirm";
 import About from "./pages/about";
+import logo from "./assets/image/logoS.png";
+import UserProfile from "./pages/userProfile";
 
 function App() {
   const user = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -32,11 +35,23 @@ function App() {
       }
     };
     checkAuth();
+
+    setTimeout(() => {
+      setLoading(false);
+      // window.scrollTo(0, 0);
+    }, 3000);
   }, []);
 
   return (
     <>
+      <div
+        className="loadingContainer"
+        style={{ display: loading ? "block" : "none" }}
+      >
+        <img src={logo} alt="Samagati" />
+      </div>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />} />
@@ -44,6 +59,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/userProfile" element={<UserProfile />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:user" element={<Profile />} />
         <Route path="/booking/:tour" element={<Booking />} />

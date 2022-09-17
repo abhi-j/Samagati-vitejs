@@ -1,7 +1,8 @@
-import styles from "../styles/about.module.css";
+import styles from "./styles.module.scss";
 import Info from "../../components/page/tours/info";
 import Footer from "../footer";
 import Collaborations from "../../components/page/about/Collaboration";
+import Profile from "../profile";
 
 const About = () => {
   return (
@@ -66,6 +67,7 @@ const About = () => {
       </div>
       <div></div>
       <Footer />
+      <Profile />
     </div>
   );
 };

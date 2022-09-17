@@ -6,7 +6,6 @@ type props = {
   image: string;
   name: string;
   role: string;
-  bio: string;
 };
 
 const TeamMemberImage: React.FC<props> = (Props: props) => {

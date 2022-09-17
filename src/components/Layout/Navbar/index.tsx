@@ -48,6 +48,11 @@ const Navbar = () => {
             <NavBtn Icon={RiLoginBoxLine} Label="Login" page_link="/login" />
           )}
         </li>
+        <NavBtn
+          Icon={RiLoginBoxLine}
+          Label="Profile"
+          page_link="/userProfile"
+        />
       </ul>
     </div>
   );

@@ -39,7 +39,7 @@ const Tours = () => {
               /Week/Month and Year in India. "
         }
       />
-      <Info title={"Upcoming Voyages and events"} text={""} />
+
       {tours.data ? <UpcommingTours data={tours?.data} /> : <h1></h1>}
       <Info
         title={"Our previous voyages"}

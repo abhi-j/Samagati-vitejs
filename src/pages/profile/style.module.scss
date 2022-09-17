@@ -1,0 +1,13 @@
+.container {
+  width: 26vw;
+  height: 90vh;
+  background: #f0f0f3;
+  box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px rgba(174, 174, 192, 0.3),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #ffffff;
+  border-radius: 33px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
