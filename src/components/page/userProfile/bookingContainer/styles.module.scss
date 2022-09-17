@@ -2,7 +2,7 @@
     width: 95%;
     margin: 20px auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-sizing: border-box;
     background: linear-gradient(
             135.37deg,
@@ -20,7 +20,13 @@
     padding: 50px 100px;
 
     h1 {
+        color: #173b82;
         margin: 0;
-        margin-bottom: 10px;
     }
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
 }
