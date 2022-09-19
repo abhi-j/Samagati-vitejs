@@ -1,34 +1,44 @@
 .container {
-    width: fit-content;
-    display: flex;
-    transition: 0.3s ease-in-out;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 7px 7px 10px #cbced1, -2px -2px 10px white;
-    cursor: pointer;
-    color: #173b82;
+  width: fit-content;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 7px 7px 10px #cbced1, -2px -2px 10px white;
+  cursor: pointer;
+  color: #173b82;
 }
 
 .container:hover .navBtnText {
-    width: 90px;
-    height: fit-content;
+  width: 90px;
+  height: fit-content;
+  color: #173b82;
 }
 
+/* .container:hover {
+  color: #ffffff;
+  background: #173b85;
+} */
+/* .container:hover {
+  border: 1.2px solid white;
+  border-color: #173b82;
+} */
+
 .navBtnIcon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .navBtnText {
-    overflow: hidden;
-    text-align: center;
-    width: 0px;
-    height: 0px;
-    font-size: 15px;
-    transition: 0.3s ease-in;
-    white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  width: 0px;
+  height: 0px;
+  font-size: 15px;
+  transition: 0.3s ease-in;
+  white-space: nowrap;
 }

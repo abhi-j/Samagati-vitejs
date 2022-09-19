@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { API_TOKEN } from "../../../../config";
+import { API_TOKEN, API_LINK } from "../../../../config";
 import axios from "axios";
-
 import styles from "./styles.module.scss";
 import { Carousel as RCarousal } from "react-responsive-carousel";
+import Slider from "react-slick";
 
 const Item: React.FC<any> = ({ image, text }) => {
   return (
@@ -25,9 +25,7 @@ const Corousal: React.FC<any> = () => {
 
   useEffect(() => {
     async function getdata() {
-      const res = await axios.get(
-        "http://localhost:1337/api/carousels?populate=*"
-      );
+      const res = await axios.get(`${API_LINK}/api/carousels?populate=*`);
       const images = res.data;
       setCarousel(images.data);
     }
@@ -39,7 +37,7 @@ const Corousal: React.FC<any> = () => {
   const settings = {
     className: "center",
     centerMode: true,
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -50,16 +48,16 @@ const Corousal: React.FC<any> = () => {
   };
   return (
     <div className={styles.container}>
-      <RCarousal centerMode>
+      <Slider {...settings}>
         {carousel.map((item) => {
           return (
             <Item
-              image={`http://localhost:1337${item.attributes.Image.data.attributes.formats.medium.url}`}
+              image={`${API_LINK}${item.attributes.Image.data.attributes.formats.medium.url}`}
               text={item.attributes.Location}
             ></Item>
           );
         })}
-      </RCarousal>
+      </Slider>
     </div>
   );
 };

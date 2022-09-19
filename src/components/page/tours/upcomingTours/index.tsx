@@ -1,5 +1,5 @@
 import React from "react";
-
+import { API_LINK } from "../../../../config";
 import styles from "./styles.module.scss";
 import UpcommingTourCard from "../upcommingtourcard";
 
@@ -16,9 +16,10 @@ const UpcommingTours: React.FC<props> = ({ data }) => {
           <UpcommingTourCard
             description={item.attributes.description}
             name={item.attributes.Name}
-            imageLink={`http://localhost:1337${item.attributes.image.data.attributes.formats.small.url}`}
+            imageLink={`${API_LINK}${item.attributes.image.data.attributes.formats.small.url}`}
             key={i}
             slug={item.id}
+            data={item}
           />
         ))}
       </div>

@@ -1,14 +1,19 @@
-import FormContainer from '../../components/page/booking/formContainer';
-import InfoContainer from '../../components/page/booking/infoContainer';
-import styles from './styles.module.scss';
+import { useEffect } from "react";
+import FormContainer from "../../components/page/booking/formContainer";
+import InfoContainer from "../../components/page/booking/infoContainer";
+import styles from "./styles.module.scss";
 
 const Booking = () => {
-    return (
-        <div className={styles.container}>
-            <InfoContainer />
-            <FormContainer />
-        </div>
-    );
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      <InfoContainer />
+      <FormContainer />
+    </div>
+  );
 };
 
 // export const getServerSideProps = async (context: any) => {

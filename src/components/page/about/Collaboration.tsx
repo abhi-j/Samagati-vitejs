@@ -10,9 +10,9 @@ const Collaborations: React.FC<props> = (Props: props) => {
     <div className={styles.imagesContainer}>
       <img
         src={Props.image}
-        alt="Picture of the author"
+        alt="collaboration images"
         width={120}
-        height={120}
+        height={100}
       />
     </div>
   );

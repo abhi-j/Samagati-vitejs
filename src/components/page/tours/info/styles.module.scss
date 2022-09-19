@@ -1,27 +1,24 @@
 .container {
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+
+  h1,
+  p {
+    margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  }
 
-    h1,
-    p {
-        margin: 0;
-        padding: 0;
-    }
+  h1 {
+    color: #173b82;
+    font-weight: 700;
+    font-size: 32px;
+  }
 
-    h1 {
-        color: #173b82;
-        font-weight: 700;
-        font-size: 32px;
-    }
-
-    p {
-        color: #173b82;
-        font-weight: 300;
-        font-size: 18px;
-    }
+  p {
+    color: #173b82;
+    font-weight: 300;
+    font-size: 18px;
+  }
 }

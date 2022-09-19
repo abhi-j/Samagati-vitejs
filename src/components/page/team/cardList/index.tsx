@@ -2,28 +2,15 @@ import React, { useState, useEffect } from "react";
 import TeamMemberImage from "../teammemberimage";
 import styles from "./styles.module.scss";
 import Slider from "react-slick";
-import { API_TOKEN } from "../../../../config";
+import { API_TOKEN, API_LINK } from "../../../../config";
 import axios from "axios";
-
 import {
   useWindowSize,
   useWindowWidth,
   useWindowHeight,
 } from "@react-hook/window-size";
 
-const members = [
-  {
-    name: "Dhruv Champaneri",
-    image: "./image/Avatar1.jpg",
-    bio: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Sapiente, in non quo deleniti aut tempora cupiditate labore itaque.`,
-    role: "Founder",
-  },
-];
-
 const Corousal: React.FC<any> = () => {
-  const [memberIndex, setMemberIndex] = useState(0);
-
   const width = useWindowWidth();
   const height = useWindowHeight();
 
@@ -61,15 +48,12 @@ const Corousal: React.FC<any> = () => {
 
   useEffect(() => {
     async function getdata() {
-      const config = {
-        headers: {
-          Authorization: `Bearer ${API_TOKEN}`,
-        },
-      };
-      const res = await axios.get(
-        "http://localhost:1337/api/teams?populate=*",
-        config
-      );
+      // const config = {
+      //   headers: {
+      //     Authorization: `Bearer ${API_TOKEN}`,
+      //   },
+      // };
+      const res = await axios.get(`${API_LINK}/api/teams?populate=*`);
       const teams = res.data;
       setCarousel(teams.data);
     }
@@ -85,8 +69,9 @@ const Corousal: React.FC<any> = () => {
           return (
             <div>
               <TeamMemberImage
+                linkedIn={item.attributes.LinkedIn}
                 name={item.attributes.Name}
-                image={`http://localhost:1337${item.attributes.Image.data.attributes.formats.medium.url}`}
+                image={`${API_LINK}${item.attributes.Image.data.attributes.formats.small.url}`}
                 role={item.attributes.Role}
               />
             </div>

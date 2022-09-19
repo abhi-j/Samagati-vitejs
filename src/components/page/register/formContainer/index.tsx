@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signUp } from "../../../../services/auth";
 import Input from "../../../UI/Input";
 import NueButton from "../../../UI/NueButton";
 import SocialMediaBtn from "../../../UI/SocialMediaBtn";
 import styles from "./styles.module.scss";
+import Swal from "sweetalert2";
 
 const FormContainer = () => {
+  const navigate = useNavigate();
+
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -22,7 +25,14 @@ const FormContainer = () => {
       const data = await signUp({
         ...values,
       });
-      console.log(data);
+
+      Swal.fire({
+        title: "Registration Successful",
+        text: "User registered is successful",
+        icon: "success",
+        confirmButtonText: "Cool",
+      });
+      navigate("/login");
     } catch (e) {
       console.log(e);
       return;
@@ -72,11 +82,11 @@ const FormContainer = () => {
         <NueButton name="Create" onClick={onSubmit} />
       </form>
 
-      <h5 style={{ marginLeft: "4rem", color: "#173b82" }}>Or</h5>
-      <div className={styles.iconContainer}>
+      {/* <h5 style={{ marginLeft: "4rem", color: "#173b82" }}>Or</h5> */}
+      {/* <div className={styles.iconContainer}>
         <SocialMediaBtn icon={AiFillGoogleCircle} />
         <SocialMediaBtn icon={BsFacebook} />
-      </div>
+      </div> */}
       <div className={styles.accountSpan}>
         <span>Already a member?</span>
         <span>

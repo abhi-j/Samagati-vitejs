@@ -1,0 +1,41 @@
+.container,
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 100px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.imgContainer {
+  display: flex;
+  gap: 30px;
+  margin: 50px 100px;
+}
+
+.rightContent,
+.rightContent2 {
+  flex: 1;
+}
+
+.leftContent,
+.leftContent2 {
+  flex: 1;
+}
+
+.rightContent {
+  img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px #cbced1, -2px -2px 10px white;
+  }
+}
+
+.leftContent {
+  img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px #cbced1, -2px -2px 10px white;
+  }
+}

@@ -4,9 +4,12 @@ import {
   AiOutlinePhone,
   AiOutlineCompass,
 } from "react-icons/ai";
+import { BsPersonCircle } from "react-icons/bs";
 import { RiLoginBoxLine, RiTeamLine } from "react-icons/ri";
 
-import NavBtn from "../../UI/NavBtn/index";
+import NavBtn from "../../UI/NavBtn";
+import NavBtnLog from "../../UI/NavBtnLog";
+
 import styles from "./styles.module.scss";
 
 import Logo from "../../../assets/image/Logo.png";
@@ -37,25 +40,27 @@ const Navbar = () => {
           <NavBtn Icon={AiOutlinePhone} Label="Phone" page_link="/contact" />
         </li>
         <li style={{ marginLeft: "4rem" }}>
+          <NavBtn
+            Icon={BsPersonCircle}
+            Label="Profile"
+            page_link="/userProfile"
+          />
+        </li>
+        <li>
           {value.user !== null ? (
-            <button
-              onClick={() => {
+            <NavBtnLog
+              handleClick={() => {
                 setValue({ user: null });
                 localStorage.removeItem("samagati_jwt");
                 localStorage.removeItem("samagati_user");
               }}
-            >
-              {value.user.username}
-            </button>
+              Icon={RiLoginBoxLine}
+              Label="Logout"
+            />
           ) : (
             <NavBtn Icon={RiLoginBoxLine} Label="Login" page_link="/login" />
           )}
         </li>
-        <NavBtn
-          Icon={RiLoginBoxLine}
-          Label="Profile"
-          page_link="/userProfile"
-        />
       </ul>
     </div>
   );

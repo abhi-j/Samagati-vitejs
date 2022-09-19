@@ -13,8 +13,8 @@ function Footer() {
       </div>
       <div>
         <div className={styles.heading}>
-          <h4>Links</h4>
-          <h4>Contact</h4>
+          <h3>Links</h3>
+          <h3>Contact</h3>
         </div>
         <div className={styles.linkContainer}>
           <div className={styles.left}>
@@ -35,7 +35,7 @@ function Footer() {
             </Link>
           </div>
           <div className={styles.right}>
-            <span>9588043164, 8805388985, 6265987173</span>
+            <span>9588043164 | 8805388985 | 6265987173</span>
           </div>
         </div>
       </div>
