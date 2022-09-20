@@ -7,4 +7,8 @@
         object-fit: contain;
         height: 100vh;
     }
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 }
