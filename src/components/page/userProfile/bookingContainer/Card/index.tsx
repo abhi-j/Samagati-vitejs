@@ -1,16 +1,15 @@
 import React from 'react';
+import { API_LINK } from '../../../../../config';
 import styles from './styles.module.scss';
 
-const index = () => {
+const index = ({ item }) => {
+    console.log(item);
     return (
         <div className={styles.container}>
-            <img src='./image/vacation.jpg' alt='' />
+            <img src={`${API_LINK}${item.tourData.image.url}`} alt='' />
             <div>
-                <h3>Mount Abu</h3>
-                <p>
-                    It is a long established fact that a reader will be
-                    distracted by
-                </p>
+                <h3>{item.tourData.Name}</h3>
+                <p>{item.tourData.description}</p>
             </div>
         </div>
     );
