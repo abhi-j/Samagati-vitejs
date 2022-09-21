@@ -4,11 +4,24 @@
   padding: 30px;
   box-sizing: border-box;
   border-radius: 10px;
-  box-shadow: inset 10px 10px 10px #cbced19e, inset -6px -6px 6px white;
-  border: none;
+  /* box-shadow: inset 10px 10px 10px #cbced19e, inset -6px -6px 6px white; */
+  /* border: none; */
   resize: none;
   font-size: 16px;
   color: #173b82;
+
+  background: linear-gradient(
+      135.37deg,
+      rgba(0, 0, 0, 0.4) 4.29%,
+      rgba(255, 255, 255, 0.4) 95.6%
+    ),
+    #f4f4f4;
+  background-blend-mode: soft-light, normal;
+  /* neo-stroke */
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset -9px -9px 16px #fafbff,
+    inset 5px 5px 16px rgba(166, 171, 189, 0.39);
 }
 
 .EmailInput::placeholder {
