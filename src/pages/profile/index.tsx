@@ -41,15 +41,6 @@ const Profile = () => {
     let initialEmail = value.user !== null ? value.user.email : '';
     let initialContact = value.user !== null ? value.user.Contact : '';
     let initialSkill = value.user !== null ? value.user.Skills : '';
-
-    console.log(
-        initialEmail,
-        initialName,
-        initialContact,
-        initialDescription,
-        initialSkill
-    );
-
     const [name, setName] = useState(initialName);
     const [dob, setDob] = useState(initialDob);
     const [description, setDescription] = useState(initialDescription);
