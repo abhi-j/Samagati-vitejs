@@ -1,43 +1,44 @@
 .container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  min-height: 80vh;
+  gap: 100px;
+  margin-bottom: 200px;
+
+  div {
+    flex: 1;
+    height: inherit;
+    background-image: url("./image/moto.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  section {
+    flex: 1;
+    padding-left: 100px;
     display: flex;
-    min-height: 80vh;
-    gap: 100px;
-    margin-bottom: 200px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
 
-    div {
-        flex: 1;
-        height: inherit;
-        background-image: url('./image/moto.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: top right;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      margin: 0;
+      padding: 0;
+      color: #183b82;
     }
 
-    section {
-        flex: 1;
-        padding-left: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        h1 {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 50px;
-            margin: 0;
-            padding: 0;
-            color: #183b82;
-        }
-
-        p {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 30px;
-            text-align: justify;
-            color: rgba(22, 64, 147, 0.9);
-        }
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+      color: rgba(22, 64, 147, 0.9);
     }
+  }
 }

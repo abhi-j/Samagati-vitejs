@@ -37,10 +37,11 @@ const Tours = () => {
         <Info
           title={"What are Samagati Voyages?"}
           text={
-            "We believe that redesigning the structure of\
-             learning through travel is the need of the hour and\
-              we are here to disrupt the taboo of taking GAP Days\
-              /Week/Month and Year in India. "
+            "Our voyages are a fun way of exploring the subtleness the world has to offer and the diverse\
+            teachings it provides through nature. Not only does travelling relieve stress, but it also\
+            enhances creativity and boosts happiness and satisfaction. These voyages give a global\
+            perspective of education to the students, helping them discover the endless possibilities of\
+            education."
           }
         />
       </div>
@@ -54,10 +55,22 @@ const Tours = () => {
         <Info
           title={"Our previous voyages"}
           text={
-            "In our past voyages we experienced the city of\
-                     Maheshwar in Madhya Pradesh to understand the story\
-                      of a woman, Ahilya Bai Holkar - one of the top admini\
-                      strators and rulers India has ever produced"
+            "In our past voyages with MIT ID students (Pune and Indore), we have experienced\
+            Maheshwar, Madhya Pradesh: to understand the story of a woman, Ahilya Bai Holkar - one\
+            of the top administrators and rulers India has ever produced.\
+            Barefoot College International, Rajasthan: to interact with Solar Mamas from Africa and\
+            South-East Asia and understand the value of rural wisdom.\
+            New Delhi: to understand corporate communication and entrepreneurship.\
+            Auroville and Pondicherry: to understand sustainability and earth-based construction.\
+            Jaisalmer: to experience other cultures through storytelling.\
+            Mount Abu: to experience the mantra of life through peaceful and bustling adventures.\
+Students learn to embrace challenges from multiple lenses and learn creativity from cultural\
+perspectives.\
+Our previous voyages have all had one motive: Experiential Learning. From learning about\
+Ahilya Bai Holkar in Maheshwar to interacting with the Solar Mamas of Barefoot College\
+International, Tilonia. Furthermore understanding sustainability and earth-based construction\
+in Auroville and experiencing the mantra of life in Mount Abu have been phenomenal. The\
+voyages have been once-in-a-lifetime experiences."
           }
         />
       </div>

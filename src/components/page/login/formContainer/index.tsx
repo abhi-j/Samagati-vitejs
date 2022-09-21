@@ -36,7 +36,7 @@ const FormContainer = () => {
         title: "Login Success",
         text: "User login is successfull",
         icon: "success",
-        confirmButtonText: "Cool",
+        confirmButtonText: "Done",
       });
       navigate("/");
     } catch (err: any) {
@@ -44,7 +44,7 @@ const FormContainer = () => {
         title: "Error",
         text: err.response.data.error.message,
         icon: "error",
-        confirmButtonText: "Cool",
+        confirmButtonText: "Done",
         // confirmButtonColor: "#173b82",
       });
     }
