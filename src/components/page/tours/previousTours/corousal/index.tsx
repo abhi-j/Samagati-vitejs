@@ -77,8 +77,8 @@ const Corousal: React.FC<any> = () => {
                     return (
                         <Item
                             name={item.attributes.Name}
-                            video={`${API_LINK}${item.attributes?.Video?.data?.attributes?.url}`}
-                            image={`${API_LINK}${item.attributes.Images.data.attributes.formats.medium.url}`}
+                            video={`${item.attributes?.Video?.data?.attributes?.url}`}
+                            image={`${item.attributes.Images.data.attributes.formats.medium.url}`}
                             description={item.attributes.Description}
                             testimonial={item.attributes.Testimonial}
                         ></Item>
