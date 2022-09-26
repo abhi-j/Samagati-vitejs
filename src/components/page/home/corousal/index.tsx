@@ -55,7 +55,7 @@ const Corousal: React.FC<any> = () => {
                     {carousel.map((item) => {
                         return (
                             <Item
-                                image={`${API_LINK}${item.attributes.Image.data.attributes.url}`}
+                                image={`${item.attributes.Image.data.attributes.url}`}
                                 text={item.attributes.Location}
                             ></Item>
                         );
