@@ -203,7 +203,7 @@ const Profile = () => {
               setSkill(e.target.value);
             }}
           />
-          <button name="Submit" onClick={onSubmit}>
+          <button className={styles.btnn} name="Submit" onClick={onSubmit}>
             Submit
           </button>
         </form>

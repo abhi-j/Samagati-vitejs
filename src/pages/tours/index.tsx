@@ -60,17 +60,7 @@ const Tours = () => {
             of the top administrators and rulers India has ever produced.\
             Barefoot College International, Rajasthan: to interact with Solar Mamas from Africa and\
             South-East Asia and understand the value of rural wisdom.\
-            New Delhi: to understand corporate communication and entrepreneurship.\
-            Auroville and Pondicherry: to understand sustainability and earth-based construction.\
-            Jaisalmer: to experience other cultures through storytelling.\
-            Mount Abu: to experience the mantra of life through peaceful and bustling adventures.\
-Students learn to embrace challenges from multiple lenses and learn creativity from cultural\
-perspectives.\
-Our previous voyages have all had one motive: Experiential Learning. From learning about\
-Ahilya Bai Holkar in Maheshwar to interacting with the Solar Mamas of Barefoot College\
-International, Tilonia. Furthermore understanding sustainability and earth-based construction\
-in Auroville and experiencing the mantra of life in Mount Abu have been phenomenal. The\
-voyages have been once-in-a-lifetime experiences."
+            "
           }
         />
       </div>

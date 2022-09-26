@@ -14,7 +14,7 @@ const index = () => {
               We as a community, synthesize fun with education and traveling.
             </p>
             <Link to="/about">
-              <button>Explore</button>
+              <button className={styles.btn}>Explore</button>
             </Link>
           </section>
         </div>
