@@ -30,7 +30,7 @@ const FormContainer = () => {
         title: "Registration Successful",
         text: "User registered is successful",
         icon: "success",
-        confirmButtonText: "Cool",
+        confirmButtonText: "Done",
       });
       navigate("/login");
     } catch (e) {
@@ -91,7 +91,7 @@ const FormContainer = () => {
         <span>Already a member?</span>
         <span>
           <Link to="/login">
-            <a> Sign in</a>
+            <a style={{ color: "#173b82" }}> Sign in</a>
           </Link>
         </span>
       </div>

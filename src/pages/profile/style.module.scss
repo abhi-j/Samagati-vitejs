@@ -1,6 +1,6 @@
 .container {
   width: 26vw;
-  margin-left: 35%;
+  margin-left: 36%;
   background: #f0f0f3;
   box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px rgba(174, 174, 192, 0.3),
     inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #ffffff;
@@ -26,6 +26,42 @@
   background: #f0f0f3;
   box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px rgba(174, 174, 192, 0.3),
     inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #ffffff;
+
+  img {
+    height: 150px;
+    width: 148px;
+    margin-left: -18px;
+    margin-top: -12px;
+  }
+}
+
+.photo {
+  margin-top: 16px;
+  padding-left: 30%;
+  transition: 0.2s ease-in;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.fileUpload {
+  // padding: 10px 12px;
+  cursor: pointer;
+  color: #173b82;
+
+  .upload {
+    display: flex;
+
+    p {
+      margin-top: -4px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.photo:hover {
+  transform: translateY(-4px);
 }
 
 .formContainer :nth-child(1) {
@@ -144,4 +180,29 @@
 ::placeholder {
   color: #173b82;
   font-weight: 400;
+}
+.btnn {
+  height: 50px;
+  width: 150px;
+  padding: 16px;
+  background-color: #bbb;
+  border: none;
+  border-radius: 100px;
+  display: inline-block;
+  background: #f0f0f3;
+  box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px rgba(174, 174, 192, 0.3),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #ffffff;
+  cursor: pointer;
+  color: #173b82;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 60px;
+  margin-left: 27%;
+  padding: 4px;
+  transition: 0.2s ease-in;
+}
+
+button:hover {
+  transform: translateY(-4px);
 }

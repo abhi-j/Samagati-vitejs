@@ -29,23 +29,19 @@ const index = () => {
           <div>
             <h3>Skills</h3>
             <p>
-              {value.user.Skills
-                ? value.user.Skills
-                : "You have not entered your skills"}
+              {value.user.Skills ? value.user.Skills : "Enter your skills here"}
             </p>
           </div>
           <div>
             <h3>DOB</h3>
-            <p>
-              {value.user.DOB
-                ? value.user.DOB
-                : "You have not entered your skills"}
-            </p>
+            <p>{value.user.DOB ? value.user.DOB : "Enter your DOB here"}</p>
           </div>
-          <Link to="/editProfile">Edit Profile</Link>
+          <div className={styles.profile}>
+            <Link to="/editProfile">Edit Profile</Link>
+          </div>
         </div>
         <div>
-          <div>
+          {/* <div>
             <h3>Connect with me</h3>
             <div
               style={{
@@ -59,13 +55,13 @@ const index = () => {
               <AiFillLinkedin />
               <AiFillMail />
             </div>
-          </div>
+          </div> */}
           <div>
             <h3>Milestones</h3>
             <p>
               {value.user.Description
                 ? value.user.Description
-                : "You have not entered your skills"}
+                : "No milestones"}
             </p>
           </div>
         </div>

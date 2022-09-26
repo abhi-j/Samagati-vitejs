@@ -1,83 +1,82 @@
 .container {
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 100px;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 
-    @media (max-width: 600px) {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    @media (max-width: 500px) {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    @media (max-width: 400px) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+  @media (max-width: 600px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media (max-width: 500px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 400px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .leftContent h1 {
-    color: #173b82;
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    font-size: 40px;
+  color: #173b82;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .leftContent {
-    width: 100%;
+  width: 100%;
 }
 
 .leftContent h3 {
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--primary-col);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-col);
 }
 
 .logPassword {
-    display: flex;
-    flex-direction: row;
-    gap: 6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
 }
 
 .logPassword h3 {
-    margin-top: 3rem;
-    font-size: 16px;
+  margin-top: 3rem;
+  font-size: 16px;
 }
 
 .logPassword h3:hover {
-    cursor: pointer;
-    transform: translateY(-4px);
-    transition: 0.3s ease-in;
-    color: var(--hover-col);
+  cursor: pointer;
+  transform: translateY(-4px);
+  transition: 0.3s ease-in;
+  color: var(--hover-col);
 }
 
 .iconContainer {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .accountSpan {
-    margin-top: 2rem;
-    color: var(--primary-col);
+  margin-top: 2rem;
+  color: var(--primary-col);
 }
 
 .accountSpan > span:nth-child(2) {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .accountSpan > span:nth-child(2):hover {
-    cursor: pointer;
-    color: var(--hover-col);
-    transform: translateY(-4px);
-    transition: 0.3s ease-in;
+  cursor: pointer;
+  color: var(--hover-col);
+  transform: translateY(-4px);
+  transition: 0.3s ease-in;
 }

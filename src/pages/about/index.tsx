@@ -22,20 +22,20 @@ const About = () => {
         <Info
           title={"Welcome to Samagati. What do we do?"}
           text={
-            "We believe that redesigning the structure of\
-             learning through travel is the need of the hour and\
-              we are here to disrupt the taboo of taking GAP Days\
-              /Week/Month and Year in India. "
+            "We provide various interrelated experiences that inculcate academics with adventure.\
+            We are working towards revamping undergraduate education in the nation, with the vision to\
+            adorn the system with experiential learning.\
+            We are new-age education providers with an aim to help people understand the fast-paced\
+            world by slowing them down and allowing them to experience learning amalgamated with\
+            fun."
           }
         />
 
         <Info
           title={"Our Mission: Experimental learning through travel"}
           text={
-            "We believe that redesigning the structure of\
-             learning through travel is the need of the hour and\
-              we are here to disrupt the taboo of taking GAP Days\
-              /Week/Month and Year in India. "
+            "Our mission is to build a globally reputed conglomerate of international events and global\
+            travel voyages for a hands-on learning experience in the next 5 years."
           }
         />
       </div>

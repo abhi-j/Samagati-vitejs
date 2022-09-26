@@ -1,60 +1,63 @@
 .container {
-    flex: 1;
-    width: 100%;
+  flex: 1;
+  width: 100%;
 
-    h1 {
-        color: #173b82;
-        padding: 0;
-        margin: 0;
-        font-weight: 400;
-        font-size: 40px;
-    }
+  h1 {
+    color: #173b82;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    color: #173b82;
+  }
 
-    h3 {
-        font-weight: 600;
-        font-size: 20px;
-        color: var(--primary-col);
-    }
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 38px;
+    color: #173b82;
+  }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .logPassword {
-    display: flex;
-    flex-direction: row;
-    gap: 6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
 }
 
 .logPassword h3 {
-    margin-top: 3rem;
-    font-size: 16px;
+  margin-top: 3rem;
+  font-size: 16px;
 }
 .logPassword h3:hover {
-    cursor: pointer;
-    transform: translateY(-4px);
-    transition: 0.3s ease-in;
-    color: var(--hover-col);
+  cursor: pointer;
+  transform: translateY(-4px);
+  transition: 0.3s ease-in;
+  color: var(--hover-col);
 }
 .iconContainer {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .accountSpan {
-    margin-top: 2rem;
-    color: var(--primary-col);
+  margin-top: 2rem;
+  color: var(--primary-col);
 }
 
 .accountSpan > span:nth-child(2) {
-    font-weight: 600;
+  font-weight: 600;
 }
 .accountSpan > span:nth-child(2):hover {
-    cursor: pointer;
-    color: var(--hover-col);
-    transform: translateY(-4px);
-    transition: 0.3s ease-in;
+  cursor: pointer;
+  color: var(--hover-col);
+  transform: translateY(-4px);
+  transition: 0.3s ease-in;
 }

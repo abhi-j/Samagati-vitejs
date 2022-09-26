@@ -5,6 +5,7 @@ import { API_LINK } from "../../../../config";
 import Input from "../../../UI/Input";
 import NueButtonDark from "../../../UI/NueButtonDark";
 import styles from "./styles.module.scss";
+import validate from "./validation.js";
 
 const TeamForm = () => {
   const [form, setForm] = useState(false);
@@ -74,7 +75,7 @@ const TeamForm = () => {
             />
             <Input
               id="department"
-              placeholder="Which department you want to work."
+              placeholder="Choose department - Marketing, PR, Cinematograpgy, Content, Design"
               type="text"
               onChange={setDepartment}
             />
