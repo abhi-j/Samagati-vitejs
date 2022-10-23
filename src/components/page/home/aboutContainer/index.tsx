@@ -7,7 +7,7 @@ const index = () => {
     <div className={styles.container}>
       <Fade left>
         <section>
-          <h1>What’s Our moto?</h1>
+          <h1>What’s Our motto?</h1>
           <p>
             We, at Samagati, aspire to promote Gap Culture through Experiential
             Learning. We conduct a series of experiments to promote gap culture

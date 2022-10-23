@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { Oval } from 'react-loader-spinner';
 import { Link, useNavigate } from 'react-router-dom';
@@ -57,7 +57,7 @@ const Profile = () => {
     const [email, setEmail] = useState(initialEmail);
     const [contact, setContact] = useState(initialContact);
     const [skill, setSkill] = useState(initialSkill);
-    const [image, Image] = useState([]);
+    const [image, setImage] = useState<any>(null);
 
     if (loading) {
         return (
@@ -87,6 +87,10 @@ const Profile = () => {
     }
 
     const onSubmit = async () => {
+        const formData = new FormData();
+        formData.append('file', image);
+        formData.append('upload_present', 'svokbd29');
+
         const config = {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('samagati_jwt')}`,
@@ -133,7 +137,28 @@ const Profile = () => {
             console.log(e);
             return;
         }
+
+        // axios.post(
+        //   "https://api.cloudinary.com/v1_1/samagati/image/upload",
+        //   formData.then((response) => {
+        //     console.log(response);
+        //   })
+        // );
     };
+
+    // const uploadImage = (files) => {
+    //   console.log(files[0]);
+    //   const formData = new formData();
+    //   formData.append("file", files[0]);
+    //   formData.append("upload_present", "svokbd29");
+
+    //   axios.post(
+    //     "https://api.cloudinary.com/v1_1/samagati/image/upload",
+    //     formData.then((response) => {
+    //       console.log(response);
+    //     })
+    //   );
+    // };
 
     return (
         <div className={styles.container}>
@@ -148,7 +173,15 @@ const Profile = () => {
                             <p>Upload picture</p>
                         </div>
                     </label>
-                    <input id='file-upload' type='file' />
+                    <input
+                        id='file-upload'
+                        type='file'
+                        onChange={(event) => {
+                            if (event.target.files != null) {
+                                setImage(event.target.files[0]);
+                            }
+                        }}
+                    />
                 </div>
                 <form className={styles.formContainer}>
                     <input
