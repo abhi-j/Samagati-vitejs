@@ -18,14 +18,12 @@ const index = () => {
             },
         };
         const getBookingData = async () => {
-            const res = await axios.post(
-                `${API_LINK}/api/booking/user`,
-                {
-                    userId: value.user.id,
-                    value: 'this is test',
-                },
-                config
-            );
+            const res = await axios.post(`${API_LINK}/api/booking/user`, {
+                userId: value.user.id,
+                value: 'this is test',
+            });
+
+            console.log(res.data);
 
             setData(res.data.data);
         };

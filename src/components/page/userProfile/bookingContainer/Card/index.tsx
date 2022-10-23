@@ -6,7 +6,7 @@ const index = ({ item }) => {
     console.log(item);
     return (
         <div className={styles.container}>
-            <img src={`${API_LINK}${item.tourData.image.url}`} alt='' />
+            <img src={`${item.tourData.image.url}`} alt='' />
             <div>
                 <h3>{item.tourData.Name}</h3>
                 <p>{item.tourData.description}</p>
