@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 import { Carousel as RCarousal } from 'react-responsive-carousel';
 import Slider from 'react-slick';
 import Fade from 'react-reveal/Fade';
+import { useWindowWidth } from '@react-hook/window-size';
 
 const Item: React.FC<any> = ({ image, text }) => {
     return (
@@ -23,6 +24,14 @@ const Item: React.FC<any> = ({ image, text }) => {
 
 const Corousal: React.FC<any> = () => {
     const [carousel, setCarousel] = useState<any>([]);
+    const width = useWindowWidth();
+    let centerPadding = '20%';
+
+    if (width > 600) {
+        centerPadding = '20%';
+    } else {
+        centerPadding = '10%';
+    }
 
     useEffect(() => {
         async function getdata() {
@@ -46,8 +55,9 @@ const Corousal: React.FC<any> = () => {
         arrows: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        centerPadding: '20%',
+        centerPadding,
     };
+
     return (
         <Fade up>
             <div className={styles.container}>

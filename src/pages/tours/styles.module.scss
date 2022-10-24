@@ -1,0 +1,15 @@
+.container {
+    margin: 3rem 6rem;
+
+    @media (max-width: 800px) {
+        margin: 3rem 5rem;
+    }
+
+    @media (max-width: 600px) {
+        margin: 3rem 4rem;
+    }
+
+    @media (max-width: 500px) {
+        margin: 3rem 3rem;
+    }
+}

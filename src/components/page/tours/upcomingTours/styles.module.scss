@@ -1,20 +1,21 @@
 .container {
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 100px;
 
     h1 {
         color: #173b82;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 2rem;
     }
-    
 }
 
 .gridContainer {
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
     gap: 40px;
 }

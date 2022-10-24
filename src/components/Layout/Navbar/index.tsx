@@ -138,7 +138,7 @@ const Navbar = () => {
 
                     {value.user !== null ? (
                         <>
-                            <li>
+                            <li onClick={clickHandler}>
                                 <Link to='/userProfile'>Profile</Link>
                             </li>
                             <li
@@ -146,6 +146,7 @@ const Navbar = () => {
                                     setValue({ user: null });
                                     localStorage.removeItem('samagati_jwt');
                                     localStorage.removeItem('samagati_user');
+                                    clickHandler();
                                 }}
                             >
                                 Logout
@@ -153,7 +154,7 @@ const Navbar = () => {
                         </>
                     ) : (
                         <>
-                            <li>
+                            <li onClick={clickHandler}>
                                 <Link to='/login'>Login</Link>
                             </li>
                         </>

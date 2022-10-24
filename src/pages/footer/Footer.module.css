@@ -6,66 +6,82 @@
     background-image: url('../../../src/assets/image/footerBg.png');
     object-fit: cover;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     background-size: cover;
     z-index: 1;
 }
+
 .footerLogo {
-    margin-top: 8rem;
-}
-.heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1rem;
-    color: #173b82;
+    margin-top: 150px;
 }
 
 .linkContainer {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: 20px;
     color: #173b82;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.left div {
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
 }
 
-.left {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-}
-
-.left :nth-child(1) {
-    transition: margin-top 250ms;
-}
-.left :nth-child(2) {
-    transition: margin-top 250ms;
-}
-.left :nth-child(3) {
-    transition: margin-top 250ms;
-}
-.left :nth-child(4) {
-    transition: margin-top 250ms;
-}
-.left :nth-child(5) {
+.left span {
     transition: margin-top 250ms;
 }
 
-.left :hover {
+.left span:hover {
     margin-top: -2px;
-
     font-weight: 550;
     color: #0e2f76;
 }
 
-.right {
-    margin-left: 8rem;
+.right h3 {
+    text-align: right;
+}
+
+.right div {
     flex: 1;
+    text-align: right;
 }
 
 .copyright {
     margin-top: 2rem;
     color: #173b82;
+}
+
+@media (max-width: 700px) {
+    .footerLogo {
+        margin-top: 80px;
+    }
+    .linkContainer {
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        margin-bottom: 80px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right h3 {
+        text-align: left;
+    }
+
+    .right div {
+        flex: 1;
+        text-align: left;
+    }
 }

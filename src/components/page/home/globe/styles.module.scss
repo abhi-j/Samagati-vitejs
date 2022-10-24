@@ -18,6 +18,13 @@
         height: 50px;
         visibility: hidden;
     }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 100px;
+        display: none;
+    }
 }
 
 .globe {

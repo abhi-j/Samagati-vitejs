@@ -1,66 +1,69 @@
 .textContainer {
-  text-align: center;
-  max-width: 600px;
-  margin: auto;
-  color: white;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
 
-  h1 {
-    font-size: 28px;
-    font-weight: "bold";
-  }
+    h1 {
+        font-size: 2rem;
+        font-weight: 'bold';
+    }
 
-  p {
-    font-size: 20px;
-    font-weight: 300;
-  }
+    p {
+        font-size: calc(1rem + 4px);
+        font-weight: 300;
+    }
 }
 
 .formContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: url("./image/teamform-bg.png");
-  background-size: 100% 100%;
-  background-position: top center;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  box-sizing: border-box;
-  transition: all 0.2s;
-
-  form {
     width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background: url('./image/teamform-bg.png');
+    background-size: 100% 100%;
+    background-position: top center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+    transition: all 0.2s;
 
-    div {
-      flex: 1;
-      display: flex;
+    form {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      flex-direction: column;
-      gap: 20px;
+        div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
     }
-  }
 }
 
 .EmailInput {
-  width: 100%;
-  height: 40px;
-  padding: 30px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: inset 10px 10px 10px #cbced19e, inset -6px -6px 6px white;
-  border: none;
-  font-size: 16px;
-  color: #173b82;
-
-  option {
+    width: 100%;
+    height: 40px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 10px #cbced19e, inset -6px -6px 6px white;
+    border: none;
+    font-size: 16px;
     color: #173b82;
-  }
+
+    option {
+        color: #173b82;
+    }
 }
 
 // .EmailInput::placeholder {
@@ -68,11 +71,11 @@
 // }
 
 .EmailInput:focus {
-  outline: none;
+    outline: none;
 }
 
 @media only screen and (max-width: 850px) {
-  .EmailInput {
-    width: 90%;
-  }
+    .EmailInput {
+        width: 90%;
+    }
 }

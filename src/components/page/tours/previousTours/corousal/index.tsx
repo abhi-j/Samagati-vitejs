@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 import axios from 'axios';
 import PopupContainer from '../popupContainer';
 import { Carousel as RCarousal } from 'react-responsive-carousel';
+import { useWindowWidth } from '@react-hook/window-size';
 
 const Item: React.FC<any> = ({
     name,
@@ -47,6 +48,19 @@ const Item: React.FC<any> = ({
 
 const Corousal: React.FC<any> = () => {
     const [carousel, setCarousel] = useState<any>([]);
+    const width = useWindowWidth();
+
+    let slidesToShow = 2;
+    let slidesToScroll = 1;
+
+    if (width > 700) {
+        slidesToShow = 2;
+        slidesToScroll = 1;
+    } else {
+        slidesToShow = 1;
+        slidesToScroll = 1;
+    }
+
     useEffect(() => {
         async function getdata() {
             const res = await axios.get(
@@ -62,11 +76,11 @@ const Corousal: React.FC<any> = () => {
     const settings = {
         className: 'center',
         // centerMode: true,
-        dots: false,
+        dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToShow,
+        slidesToScroll,
         arrows: false,
     };
 

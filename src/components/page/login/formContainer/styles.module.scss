@@ -1,66 +1,68 @@
 .container {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  h1 {
-    color: #173b82;
-    padding: 0;
-    margin: 0;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 38px;
-    color: #173b82;
-  }
-
-  h3 {
-    font-weight: 600;
-    font-size: 20px;
-    color: #173b82;
-    font-style: normal;
-  }
-
-  form {
+    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 
-    div {
-      display: flex;
-      gap: 2rem;
-      h3 {
-        font-size: 16px;
+    h1 {
         color: #173b82;
-        &:hover {
-          cursor: pointer;
-          transform: translateY(-4px);
-          transition: 0.3s ease-in;
-          color: var(--hover-col);
-        }
-      }
+        padding: 0;
+        margin: 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #173b82;
     }
-  }
+
+    h3 {
+        font-weight: 600;
+        font-size: 20px;
+        color: #173b82;
+        font-style: normal;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        div {
+            display: flex;
+            gap: 2rem;
+            h3 {
+                font-size: 16px;
+                color: #173b82;
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-4px);
+                    transition: 0.3s ease-in;
+                    color: var(--hover-col);
+                }
+            }
+        }
+    }
 }
 
 .iconContainer {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .accountSpan {
-  margin-top: 2rem;
-  color: var(--primary-col);
+    margin-top: 2rem;
+    color: var(--primary-col);
+    font-size: 16px;
+    margin-bottom: 100px;
 }
 
 .accountSpan > span:nth-child(2) {
-  font-weight: 600;
+    font-weight: 600;
 }
 .accountSpan > span:nth-child(2):hover {
-  cursor: pointer;
-  color: var(--hover-col);
-  transform: translateY(-4px);
-  transition: 0.3s ease-in;
+    cursor: pointer;
+    color: var(--hover-col);
+    transform: translateY(-4px);
+    transition: 0.3s ease-in;
 }

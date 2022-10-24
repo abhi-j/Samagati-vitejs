@@ -9,6 +9,30 @@ body {
     /* background-color: white; */
 }
 
+@media screen and (max-width: 920px) {
+    :root {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    :root {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    :root {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        font-size: 60%;
+    }
+}
+
 .loadingContainer {
     z-index: 1;
     width: 100vw;

@@ -1,80 +1,92 @@
 .container {
-  width: 100%;
-  min-height: 80vh;
-  background-image: url("./image/hero.png");
-  background-size: 80% 100%;
-  background-repeat: no-repeat;
-  background-position: 100%;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 200px;
-  animation: fade 1s;
-
-  div {
-    width: 50%;
-    background-image: url("./image/hero-text-bg.png");
-    height: 55vh;
-    background-size: 100% 100%;
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('./image/hero.png');
+    background-size: 80% 100%;
     background-repeat: no-repeat;
-    background-position: top right;
-    color: white;
+    background-position: 100%;
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
-
-    @media (max-width: 800px) {
-      width: 70%;
-    }
+    align-items: center;
+    margin-bottom: 200px;
+    animation: fade 1s;
 
     @media (max-width: 600px) {
-      width: 80%;
+        margin-bottom: 100px;
+        background-size: 110% 100%;
     }
 
-    @media (max-width: 400px) {
-      width: 90%;
-    }
+    div {
+        width: 50%;
+        background-image: url('./image/hero-text-bg.png');
+        height: 55vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top right;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
 
-    h1 {
-      font-weight: 600;
-      font-size: 58px;
-      margin: 0;
-      margin-bottom: 10px;
-      padding: 0;
-    }
+        @media (max-width: 800px) {
+            padding: 4rem;
+            width: 70%;
+            height: 50vh;
+        }
 
-    p {
-      font-size: 22px;
-      font-weight: 200;
-      max-width: 600px;
+        @media (max-width: 600px) {
+            padding: 3rem;
+            width: 85%;
+            height: 60vh;
+        }
+
+        @media (max-width: 400px) {
+            padding-left: 2rem;
+            padding-right: calc(2rem + 10px);
+            width: 90%;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        p {
+            font-size: calc(1rem + 6px);
+            font-weight: 200;
+            max-width: 600px;
+        }
     }
-  }
 }
 
 .btn {
-  width: 180px;
-  height: 50px;
-  border-radius: 200px;
-  margin-top: 10px;
-  border: none;
-  color: #173b82;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Poppins";
-  cursor: pointer;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.15);
-  &:focus {
-    outline: none;
-  }
+    height: 50px;
+    border-radius: 200px;
+    margin-top: 10px;
+    border: none;
+    color: #173b82;
+    font-size: calc(1rem + 4px);
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding-left: calc(2rem + 4px);
+    padding-right: calc(2rem + 4px);
+    cursor: pointer;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.15);
+    &:focus {
+        outline: none;
+    }
 }
 
 @keyframes fade {
-  0% {
-    background-position: 500%;
-  }
+    0% {
+        background-position: 500%;
+    }
 
-  100% {
-    background-position: 100%;
-  }
+    100% {
+        background-position: 100%;
+    }
 }

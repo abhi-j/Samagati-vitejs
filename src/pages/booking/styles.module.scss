@@ -9,4 +9,8 @@
     gap: 30px;
     justify-content: center;
     margin-bottom: 100px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
 }

@@ -1,44 +1,67 @@
 .container {
-  width: 100%;
-  display: flex;
-  min-height: 80vh;
-  gap: 100px;
-  margin-bottom: 200px;
-
-  div {
-    flex: 1;
-    height: inherit;
-    background-image: url("./image/moto.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top right;
-  }
-
-  section {
-    flex: 1;
-    padding-left: 100px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 20px;
+    min-height: 80vh;
+    gap: 100px;
+    margin-bottom: 200px;
 
-    h1 {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 50px;
-      margin: 0;
-      padding: 0;
-      color: #183b82;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 100px;
     }
 
-    p {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-      color: rgba(22, 64, 147, 0.9);
+    div {
+        flex: 1;
+        height: inherit;
+        background-image: url('./image/moto.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: top right;
+        min-height: 50vh;
+
+        @media (max-width: 700px) {
+            background-size: 90% 100%;
+        }
     }
-  }
+
+    section {
+        flex: 1;
+        padding-left: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+
+        @media (max-width: 800px) {
+            padding-left: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        @media (max-width: 400px) {
+            padding-left: 2rem;
+            padding-right: 3rem;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+            color: #183b82;
+        }
+
+        p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: calc(1rem + 4px);
+            color: rgba(22, 64, 147, 0.9);
+        }
+    }
 }
